@@ -16,6 +16,9 @@
  *                          Added Copyright
  *                          Updated oled code
  *                          Updated enable serial console code
+ *           2024-11-05 RJB Discovered BMP390 first pressure reading is bad. Added read pressure to bmx_initialize()
+ *                          Bug fixes for 2nd BMP sensor in bmx_initialize() using first sensor data structure
+ *                          
  * SEE https://learn.adafruit.com/adafruit-feather-m0-adalogger/
  * SEE https://www.microchip.com/wwwproducts/en/MCP73831 - Battery Charger
  * 

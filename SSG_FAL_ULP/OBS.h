@@ -113,17 +113,17 @@ void OBS_Do (bool log_obs) {
   if (BMX_1_exists) {
     sprintf (msgbuf+strlen(msgbuf), "\"bp1\":%u.%04d,\"bt1\":%d.%02d,\"bh1\":%d.%02d,",
       (int)bmx1_pressure, (int)(bmx1_pressure*100)%100,
-      (int)bmx1_temp, (int)(bmx1_temp*100)%100,
+      (int)bmx1_temp, abs((int)(bmx1_temp*100)%100),
       (int)bmx1_humid, (int)(bmx1_humid*100)%100);
   }
   if (BMX_2_exists) {
     sprintf (msgbuf+strlen(msgbuf), "\"bp2\":%u.%04d,\"bt2\":%d.%02d,\"bh2\":%d.%02d,",
       (int)bmx2_pressure, (int)(bmx2_pressure*100)%100,
-      (int)bmx2_temp, (int)(bmx2_temp*100)%100,
+      (int)bmx2_temp, abs((int)(bmx2_temp*100)%100),
       (int)bmx2_humid, (int)(bmx2_humid*100)%100);
   }
   if (MCP_1_exists) {
-    sprintf (msgbuf+strlen(msgbuf), "\"mt1\":%d.%04d,", (int)mcp1_temp, (int)(mcp1_temp*100)%100);   
+    sprintf (msgbuf+strlen(msgbuf), "\"mt1\":%d.%04d,", (int)mcp1_temp, abs((int)(mcp1_temp*100)%100));   
   }
   if (ds_found) {
     getDSTemp();

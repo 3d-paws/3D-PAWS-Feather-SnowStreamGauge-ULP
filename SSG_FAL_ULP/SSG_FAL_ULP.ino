@@ -1,5 +1,5 @@
 #define COPYRIGHT "Copyright [2024] [University Corporation for Atmospheric Research]"
-#define VERSION_INFO "SSGFALMO-250424"
+#define VERSION_INFO "SSGFALMO-250911"
 
 /*
  *======================================================================================================================
@@ -19,6 +19,7 @@
  *           2024-11-05 RJB Discovered BMP390 first pressure reading is bad. Added read pressure to bmx_initialize()
  *                          Bug fixes for 2nd BMP sensor in bmx_initialize() using first sensor data structure
  *           2025-04-24 RJB Corrected bugs in negative temperature reporting
+ *           2025-09-11 RJB Fixed sending -999.-90 QC error values FIX (mcp1_temp < 0 ? -mcp1_temp : mcp1_temp) added
  *                          
  * SEE https://learn.adafruit.com/adafruit-feather-m0-adalogger/
  * SEE https://www.microchip.com/wwwproducts/en/MCP73831 - Battery Charger
